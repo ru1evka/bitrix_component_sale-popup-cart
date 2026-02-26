@@ -1,0 +1,225 @@
+#popupContainer{
+    padding: 0;
+    overflow: unset;
+}
+
+#popupContainer .fancybox-close-small{
+    right: -70px
+}
+
+#popupContainer .fancybox-close-small:after{
+    border-radius: 0;
+    top: 0px;
+    right: 0;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+#popupContainer img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity .4s ease-in-out;
+}
+
+#popupContainer .wrap_title{
+    position: absolute;
+    background: #0387878c;
+    text-align: center;
+    left: 50%;
+    top: 5%;
+    width: 96%;
+    border-radius: 6px;
+    color: #fff;
+    padding: 5px;
+    backdrop-filter: blur(3px);
+    transform: translate(-50%, -50%);
+}
+
+#popupContainer .wrap_title h4,
+#popupContainer .wrap_title p{
+    color: #fff;
+}
+
+#popupContainer .wrap_countdown{
+    /* position: absolute;
+    top: 41%; */
+    background: #038787;
+    /* width: 96%; */
+    /* border-radius: 6px; */
+    text-align: center;
+    /* left: 50%; */
+    /* transform: translate(-50%, 0px); */
+    backdrop-filter: blur(3px);
+}
+
+#popupContainer .wrap_countdown > span{
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#popupContainer .wrap_countdown #countdown .timer{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: #fff;
+}
+
+#popupContainer .wrap_countdown #countdown .timer .razdel{
+    top: -9px;
+    font-size: 2.4rem;
+    position: relative;
+}
+
+#popupContainer .wrap_countdown #countdown .timer .timer_flex{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+#popupContainer .wrap_countdown #countdown .timer .timer_flex .num{
+    background: #fff;
+    padding: 15px;
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    width: 55px;
+    height: 50px;
+    transform: scale(1);
+    transition: all .8s ease-in-out;
+}
+
+#popupContainer .wrap_countdown #countdown .timer .timer_flex .desc_num{
+    color: #fff;
+}
+
+#popupContainer form{
+    padding: 10px;
+}
+
+
+/* Кнока формы фиксированная */
+.gift-button{
+    position: fixed;
+    top: 30px;
+    width: 60px;
+    right: 40px;
+    z-index: 9999;
+}
+
+.gift-button.shake{
+    animation: wobble 0.8s;
+}
+
+.gift-button.d-none{
+    display: none;
+}
+#reminderButton.down{
+    top: 158px;
+}
+
+#popupContainer .popup-list{
+    position: absolute;
+    background: #fff;
+    left: -370px;
+    max-width: 350px;
+    padding: 10px 10px 0px 10px;
+}
+
+#popupContainer .popup-list span.h4{
+    cursor: pointer;
+}
+
+.popup-list_item__link{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid #038787;
+    background: transparent;
+    padding: 5px;
+    color: #038787;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.popup-list_item__link:hover{
+    background: #038787;
+    color: #fff;
+}
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+}
+@media (max-width: 1400px) {
+    #popupContainer .popup-list{
+        overflow: hidden;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        top: -45px;
+        z-index: 9;
+        box-shadow: -1px 14px 12px 3px #00000069;
+    }
+
+    #popupContainer .popup-list.collapsed{
+        height: 40px;
+    }
+}
+@media (max-width: 991px) {
+    #popupContainer .wrap_countdown{
+        top: 45%;
+    }
+    #popupContainer .wrap_title{
+        top: 7%;
+    }
+}
+@media (max-width: 767px) {
+    #popupContainer .wrap_countdown{
+        top: 48%;
+    }
+    #popupContainer .wrap_title{
+        top: 8%;
+    }
+    #popupContainer .wrap_countdown > span{
+        font-size: 2.3rem;
+    }
+}
+@media (max-width: 633px) {
+    #popupContainer img {
+        height: 258px;
+    }
+   
+}
+@media (max-width: 533px) {
+    #popupContainer .fancybox-close-small {
+        right: 0;
+        top: -100px;
+    }
+}
