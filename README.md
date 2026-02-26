@@ -1,0 +1,1 @@
+# bitrix_component_sale-popup-cart
